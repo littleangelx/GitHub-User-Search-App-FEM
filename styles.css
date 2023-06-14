@@ -1,0 +1,537 @@
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: #F6F8FF;
+}
+
+
+/* Header section */
+
+header {
+    width: 730px;
+    height: 38px;
+    position: absolute;
+    top: 144px;
+    left: calc(50% - 730px/2);
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 38.51px;
+    color: #222731;
+}
+
+.mode {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    color: #697C9A;
+}
+
+.mode:hover {
+    color: #222731;
+    cursor: pointer;
+}
+
+.mode-text {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19.25px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 30px;
+}
+
+.mode-image {
+    position: absolute;
+    right: 0;
+}
+
+
+/* Search section */
+
+.search-section {
+    width: 730px;
+    height: 69px;
+    position: absolute;
+    top: 218px;
+    left: calc(50% - 730px/2);
+    border: none;
+    border-radius: 15px;
+    background-color: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.search-section:hover {
+    cursor: pointer;
+}
+
+.icon-search {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 23px;
+    left: 32px;
+}
+
+.search-bar {
+    width: 400;
+    height: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #222731;
+    position: absolute;
+    left: 80px;
+    top: calc(50% - 25px/2);
+    border: none;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    color: #4B6A9B;
+}
+
+.search-bar:active {
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    width: 106px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 50px/2);
+    right: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23.7px;
+    background-color: #0079FF;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    background-color: #60ABFF;
+}
+
+.error-msg {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22.22px;
+    color: #F74646;
+    position: absolute;
+    top: 24px;
+    right: 140px;
+}
+
+
+/* Profile section */
+
+.section-profile {
+    width: 730px;
+    height: 419px;
+    position: absolute;
+    top: 311px;
+    left: calc(50% - 730px/2);
+    background-color: #FEFEFE;
+    border-radius: 15px;
+    box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+}
+
+.profile-image {
+    width: 117px;
+    height: 117px;
+    position: absolute;
+    top: 48px;
+    left: 48px;
+    border-radius: 50%;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 39px;
+    color: #2B3442;
+    position: absolute;
+    top: 44px;
+    left: 202px;
+}
+
+.join-date {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #697C9A;
+    position: absolute;
+    top: 52px;
+    left: 516px;
+}
+
+.username {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #0079FF;
+    position: absolute;
+    top: 85px;
+    left: 202px;
+}
+
+.bio {
+    width: 480px;
+    height: 50px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #4B6A9B;
+    mix-blend-mode: normal;
+    /* opacity: 0.75; */
+    position: absolute;
+    top: 129px;
+    left: 202px;
+}
+
+.info {
+    width: 480px;
+    height: 185px;
+    position: absolute;
+    top: 186px;
+    left: 202px;
+}
+
+.stats {
+    width: 480px;
+    height: 85px;
+    background-color: #F6F8FF;
+    border-radius: 10px;
+}
+
+.repos {
+    position: absolute;
+    top: 15px;
+    left: 32px;
+}
+
+.followers {
+    position: absolute;
+    top: 15px;
+    left: 171px;
+}
+
+.following {
+    position: absolute;
+    top: 15px;
+    left: 325px;
+}
+
+.text-repos, .text-followers, .text-following {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    color: #4B6A9B;
+}
+
+.stat-repos, .stat-followers, .stat-following {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #2B3442;
+}
+
+.location {
+    width: 240px;
+    position: absolute;
+    top: 124px;
+}
+
+.icon-location {
+    width: 13.75px;
+    height: 20px;
+}
+
+.text-location, .text-twitter, .text-website, .text-company {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #4B6A9B;
+    position: absolute;
+}
+
+.text-location, .text-website {
+    left: 32.88px;
+}
+
+.text-twitter, .text-company {
+    left: 32.25px;
+}
+
+.text-twitter:hover, .text-website:hover, .text-company:hover {
+    cursor: pointer;
+    color: #4B6A9B;
+}
+
+.twitter {
+    width: 240px;
+    position: absolute;
+    top: 125.88px;
+    left: 273px;
+}
+
+.icon-twitter {
+    width: 20px;
+    height: 16.25px;
+}
+
+.website {
+    width: 240px;
+    position: absolute;
+    top: 165px;
+}
+
+.icon-website {
+    width: 19.99px;
+    height: 19.94px;
+}
+
+.company {
+    width: 240px;
+    position: absolute;
+    top: 161.15px;
+    left: 273px;
+}
+
+.icon-company {
+    width: 20px;
+    height: 19.85px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Tablet size */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+    header {
+        width: 573px;
+        top: 140px;
+        left: calc(50% - 573px/2);
+    }
+
+    .mode-text {
+        color: #4B6A9B;
+    }
+
+    .search-section {
+        width: 573px;
+        top: 214px;
+        left: calc(50% - 573px/2);
+    }
+
+    .section-profile {
+        width: 573px;
+        height: 481px;
+        top: 307px;
+        left: calc(50% - 573px/2);
+    }
+
+    .profile-image {
+        top: 40px;
+        left: 40px;
+    }
+
+    .name {
+        top: 53px;
+        left: 198px;
+    }
+
+    .username {
+        top: 93px;
+        left: 198px;
+    }
+
+    .join-date {
+        top: 121px;
+        left: 198px;
+    }
+
+    .info {
+        width: 493px;
+        height: 178px;
+        top: 263px;
+        left: calc(50% - 493px/2);
+    }
+
+    .stats {
+        width: 493px;
+    }
+
+    .location {
+        top: 117px;
+    }
+
+    .twitter {
+        top: 118.88px;
+    }
+
+    .website {
+        top: 157px;
+    }
+
+    .company {
+        top: 152px;
+    }
+}
+
+/* Mobile size */
+
+
+@media (max-width: 767px) {
+    header {
+        width: 327px;
+        top: 31px;
+        left: calc(50% - 327px/2);
+    }
+
+    .mode-text {
+        color: #4B6A9B;
+    }
+
+    .search-section {
+        width: 327px;
+        height: 60px;
+        top: 105px;
+        left: calc(50% - 327px/2);
+    }
+
+    .icon-search {
+        width: 20.05px;
+        height: 20px;
+        top: 20px;
+        left: 16px;
+    }
+
+    .search-bar {
+        font-size: 13px;
+        left: 45px;
+    }
+
+    .search-button {
+        width: 84px;
+        height: 46px;
+        top: calc(50% - 46px/2);
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .section-profile {
+        width: 327px;
+        height: 517px;
+        top: 181px;
+        left: calc(50% - 327px/2);
+    }
+
+    .profile-image {
+        width: 70px;
+        height: 70px;
+        top: 32px;
+        left: 24px;
+    }
+
+    .name {
+        font-size: 16px;
+        line-height: 24px;
+        top: 33px;
+        left: 113.5px;
+    }
+
+    .username {
+        font-size: 13px;
+        line-height: 19px;
+        top: 57px;
+        left: 113px;
+    }
+
+    .join-date {
+        font-size: 13px;
+        line-height: 19px;
+        top: 57px;
+        left: 113px;
+    }
+
+    .bio {
+        font-size: 13px;
+        top: 135px;
+        left: 24px;
+    }
+
+    .info {
+        width: 279px;
+        height: 236px;
+        left: calc(50% - 279px/2);
+    }
+
+    .stats {
+        width: 279px;
+        height: 85px;
+    }
+
+    .repos {
+        top: 18px;
+        left: 15px;
+    }
+
+    .followers {
+        top: 18px;
+        left: 95px;
+    }
+
+    .following {
+        top: 18px;
+        left: 176px;
+    }
+
+    .text-repos, .text-followers, .text-following {
+        font-size: 11px;
+        line-height: 16.29px;
+        text-align: center;
+    }
+
+    .stat-repos, .stat-followers, .stat-following {
+        font-size: 16px;
+        line-height: 23.7px;
+        text-align: center;
+    }
+
+    .location {
+        top: 109px;
+    }
+
+    .website {
+        top: 145px;
+    }
+
+    .twitter {
+        top: 181px;
+        left: 0;
+    }
+
+    .company {
+        top: 216px;
+        left: 0;
+    }
+
+    .text-location, .text-twitter .text-website, .text-company {
+        font-size: 13px;
+        line-height: 19.25px;
+        left: 33px;
+    }
+
+}
+
+
+

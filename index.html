@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | GitHub user search app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      devfinder
+    </div>
+    <div class="mode light">
+      <div class="mode-text">
+        Dark
+      </div>
+      <div class="mode-image">
+        <img src="./assets/icon-moon.svg" alt="" class="moon">
+      </div>
+    </div>
+    <div class="mode dark hidden">
+      <div class="mode-text">
+        Light
+      </div>
+      <div class="mode-image">
+        <img src="./assets/icon-sun.svg" alt="" class="sun">
+      </div>
+    </div>
+  </header>
+
+  <section class="search-section">
+    <img src="./assets/icon-search.svg" alt="" class="icon-search">
+    <input class="search-bar" placeholder="Search GitHub username...">
+    <span class="error-msg hidden">No results</span>
+    <button class="search-button">Search</button>
+  </section>
+
+  <div class="section-profile">
+    <div class="profile-image"></div>
+    <div class="name"></div>
+    <div class="join-date"></div>
+    <div class="username"></div>
+    <div class="bio"></div>
+    <div class="info">
+      <div class="stats">
+        <div class="repos">
+          <div class="text-repos">
+            Repos
+          </div>
+          <div class="stat-repos">
+
+          </div>
+        </div>
+        <div class="followers">
+          <div class="text-followers">
+            Followers
+          </div>
+          <div class="stat-followers">
+
+          </div>
+        </div>
+        <div class="following">
+          <div class="text-following">
+            Following
+          </div>
+          <div class="stat-following">
+
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <img src="./assets/icon-location.svg" class="icon-location">
+        <span class="text-location"></span>
+      </div>
+      <div class="twitter">
+        <img src="./assets/icon-twitter.svg" class="icon-twitter">
+        <span class="text-twitter"></span>
+      </div>
+      <div class="website">
+        <img src="./assets/icon-website.svg" class="icon-website">
+        <span class="text-website"></span>
+      </div>
+      <div class="company">
+        <img src="./assets/icon-company.svg" class="icon-company">
+        <span class="text-company"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
