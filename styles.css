@@ -1,6 +1,30 @@
+:root {
+    --main-color: #0079ff;
+    --font-color: #4b6a9b;
+    --font-hover: #222731;
+    --grey-color: #697c9a;
+    --white-color: #fefefe;
+    --bg-box-color: #fff;
+    --bg-color: #f6f8ff;
+    --name-color: #2b3442;
+    --logo-color: #222731
+}
+
+:root[theme="dark"] {
+    --main-color: #0079ff;
+    --font-color: #fff;
+    --font-hover: #90A4D4;
+    --grey-color: #fff;
+    --white-color: #1E2A47;
+    --bg-box-color: #fff;
+    --bg-color: #141D2F;
+    --name-color: #fff;
+    --logo-color: #fff
+}
+
 body {
     font-family: 'Space Mono', monospace;
-    background-color: #F6F8FF;
+    background-color: var(--bg-color);
 }
 
 
@@ -18,22 +42,23 @@ header {
     font-weight: 700;
     font-size: 26px;
     line-height: 38.51px;
-    color: #222731;
+    color: var(--logo-color);
 }
 
-.mode {
+.theme {
     position: absolute;
     top: 9px;
     right: 0;
-    color: #697C9A;
+    color: var(--grey-color);
 }
 
-.mode:hover {
-    color: #222731;
+.theme:hover {
+    color: var(--font-hover);
     cursor: pointer;
 }
 
-.mode-text {
+.theme-name {
+    width: 89px;
     font-weight: 700;
     font-size: 13px;
     line-height: 19.25px;
@@ -43,8 +68,12 @@ header {
     right: 30px;
 }
 
-.mode-image {
+.theme-name > img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
     position: absolute;
+    top: calc(50% - 20px/2);
     right: 0;
 }
 
@@ -59,7 +88,7 @@ header {
     left: calc(50% - 730px/2);
     border: none;
     border-radius: 15px;
-    background-color: #FEFEFE;
+    background-color: var(--white-color);
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 
@@ -81,21 +110,23 @@ header {
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
-    color: #222731;
+    color: var(--font-hover);
     position: absolute;
     left: 80px;
     top: calc(50% - 25px/2);
     border: none;
     outline: none;
+    background-color: var(--white-color);
 }
 
 .search-bar::placeholder {
-    color: #4B6A9B;
+    color: var(--font-color);
 }
 
 .search-bar:active {
     border: none;
     outline: none;
+    color: var(--font-hover);
 }
 
 .search-button {
@@ -107,8 +138,8 @@ header {
     font-weight: 700;
     font-size: 16px;
     line-height: 23.7px;
-    background-color: #0079FF;
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--bg-box-color);
     border: none;
     border-radius: 10px;
 }
@@ -137,7 +168,7 @@ header {
     position: absolute;
     top: 311px;
     left: calc(50% - 730px/2);
-    background-color: #FEFEFE;
+    background-color: var(--white-color);
     border-radius: 15px;
     box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
@@ -155,7 +186,7 @@ header {
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    color: #2B3442;
+    color: var(--name-color);
     position: absolute;
     top: 44px;
     left: 202px;
@@ -165,7 +196,7 @@ header {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    color: #697C9A;
+    color: var(--grey-color);
     position: absolute;
     top: 52px;
     left: 516px;
@@ -175,7 +206,7 @@ header {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    color: #0079FF;
+    color: var(--main-color);
     position: absolute;
     top: 85px;
     left: 202px;
@@ -187,7 +218,7 @@ header {
     font-weight: 400;
     font-size: 15px;
     line-height: 25px;
-    color: #4B6A9B;
+    color: var(--font-color);
     mix-blend-mode: normal;
     /* opacity: 0.75; */
     position: absolute;
@@ -206,7 +237,7 @@ header {
 .stats {
     width: 480px;
     height: 85px;
-    background-color: #F6F8FF;
+    background-color: var(--bg-color);
     border-radius: 10px;
 }
 
@@ -228,18 +259,22 @@ header {
     left: 325px;
 }
 
-.text-repos, .text-followers, .text-following {
+.text-repos,
+.text-followers,
+.text-following {
     font-weight: 400;
     font-size: 13px;
     line-height: 19px;
-    color: #4B6A9B;
+    color: var(--font-color);
 }
 
-.stat-repos, .stat-followers, .stat-following {
+.stat-repos,
+.stat-followers,
+.stat-following {
     font-weight: 700;
     font-size: 22px;
     line-height: 33px;
-    color: #2B3442;
+    color: var(--name-color);
 }
 
 .location {
@@ -253,25 +288,32 @@ header {
     height: 20px;
 }
 
-.text-location, .text-twitter, .text-website, .text-company {
+.text-location,
+.text-twitter,
+.text-website,
+.text-company {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
-    color: #4B6A9B;
+    color: var(--font-color);
     position: absolute;
 }
 
-.text-location, .text-website {
+.text-location,
+.text-website {
     left: 32.88px;
 }
 
-.text-twitter, .text-company {
+.text-twitter,
+.text-company {
     left: 32.25px;
 }
 
-.text-twitter:hover, .text-website:hover, .text-company:hover {
+.text-twitter:hover,
+.text-website:hover,
+.text-company:hover {
     cursor: pointer;
-    color: #4B6A9B;
+    color: var(--font-color);
 }
 
 .twitter {
@@ -322,8 +364,8 @@ header {
         left: calc(50% - 573px/2);
     }
 
-    .mode-text {
-        color: #4B6A9B;
+    .theme-name {
+        color: var(--font-color);
     }
 
     .search-section {
@@ -397,8 +439,8 @@ header {
         left: calc(50% - 327px/2);
     }
 
-    .mode-text {
-        color: #4B6A9B;
+    .theme-name {
+        color: var(--font-color);
     }
 
     .search-section {
@@ -495,13 +537,17 @@ header {
         left: 176px;
     }
 
-    .text-repos, .text-followers, .text-following {
+    .text-repos,
+    .text-followers,
+    .text-following {
         font-size: 11px;
         line-height: 16.29px;
         text-align: center;
     }
 
-    .stat-repos, .stat-followers, .stat-following {
+    .stat-repos,
+    .stat-followers,
+    .stat-following {
         font-size: 16px;
         line-height: 23.7px;
         text-align: center;
@@ -525,7 +571,9 @@ header {
         left: 0;
     }
 
-    .text-location, .text-twitter .text-website, .text-company {
+    .text-location,
+    .text-twitter .text-website,
+    .text-company {
         font-size: 13px;
         line-height: 19.25px;
         left: 33px;
@@ -533,5 +581,30 @@ header {
 
 }
 
+@media (prefers-color-theme: light) {
+    :root {
+        --main-color: #0079ff;
+        --font-color: #4b6a9b;
+        --font-hover: #222731;
+        --grey-color: #697c9a;
+        --white-color: #fefefe;
+        --bg-box-color: #fff;
+        --bg-color: #f6f8ff;
+        --name-color: #2b3442;
+        --logo-color: #222731
+    }
+}
 
-
+@media (prefers-color-theme: dark) {
+    :root {
+        --main-color: #0079ff;
+        --font-color: #fff;
+        --font-hover: #90A4D4;
+        --grey-color: #fff;
+        --white-color: #1E2A47;
+        --bg-box-color: #fff;
+        --bg-color: #141D2F;
+        --name-color: #fff;
+        --logo-color: #fff
+    }
+}
