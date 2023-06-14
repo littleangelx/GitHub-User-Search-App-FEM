@@ -1,3 +1,5 @@
+// API Script
+
 const searchButton = document.querySelector('.search-button');
 const profileImage = document.querySelector('.profile-image');
 const chosenName = document.querySelector('.name');
@@ -108,4 +110,29 @@ function printInfo(userInfo) {
 
 document.querySelector('.search-bar').addEventListener('focus', () => {
     document.querySelector('.error-msg').classList.add('hidden');
+})
+
+
+// Theme Toggler Script
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lightMode = document.querySelector('.light');
+    const darkMode = document.querySelector('.dark');
+    const root = document.documentElement;
+
+    lightMode.style.display = 'none';
+
+    lightMode.addEventListener('click', () => {
+        root.setAttribute('theme', 'light');
+        localStorage.setItem('theme', 'light');
+        lightMode.style.display = 'none';
+        darkMode.style.display = 'inline-block';
+    });
+
+    darkMode.addEventListener('click', () => {
+        root.setAttribute('theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        lightMode.style.display = 'inline-block';
+        darkMode.style.display = 'none';
+    });
 })
